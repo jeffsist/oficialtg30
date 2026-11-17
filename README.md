@@ -16,7 +16,9 @@ Abra http://localhost:4187/.
 
 Configure sua hospedagem estática para servir a pasta `dist` na raiz do domínio. Não é necessária uma etapa de build. Fontes são carregadas pelo Google Fonts.
 
-Página publicada: https://tg30-afiliado-preview.actualcloth2.chatgpt.site/
+Página publicada: https://www.oficialtg30.com.br/
+
+A configuração `vercel.json` publica o conteúdo de `dist` na raiz do domínio, sem etapa de build.
 
 ## Links e contatos
 

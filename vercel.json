@@ -5,6 +5,8 @@
   "outputDirectory": "dist",
   "rewrites": [
     { "source": "/01", "destination": "/index.html" },
-    { "source": "/01/", "destination": "/index.html" }
+    { "source": "/01/", "destination": "/index.html" },
+    { "source": "/02", "destination": "/02.html" },
+    { "source": "/02/", "destination": "/02.html" }
   ]
 }

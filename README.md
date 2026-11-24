@@ -22,6 +22,12 @@ A configuração `vercel.json` publica o conteúdo de `dist` na raiz do domínio
 
 Na Netlify, importe este repositório na branch `main`. O arquivo `netlify.toml` define a publicação de `dist`, sem comando de build, e mantém as rotas `/01` e `/02`.
 
+Projeto Netlify: https://app.netlify.com/projects/oficialtg30/overview
+
+Endereço da hospedagem: https://oficialtg30.netlify.app/
+
+O repositório está conectado à Netlify para publicar atualizações da branch `main`. `dist/_redirects` também permite manter as rotas em um envio manual dos arquivos.
+
 ## Links e contatos
 
 - Os links de compra dos kits de 1, 2, 3 e 6 frascos ficam em `dist/afiliado-config.js`.

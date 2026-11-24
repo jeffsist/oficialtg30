@@ -12,6 +12,16 @@
   let abertura = null;
   let linkExterno = abrir;
 
+  const redirecionamento = window.setTimeout(() => {
+    if (!document.hidden) window.location.replace(destino);
+  }, 2000);
+
+  const cancelarRedirecionamento = () => window.clearTimeout(redirecionamento);
+  for (const evento of ['pointerdown', 'keydown', 'click']) {
+    document.addEventListener(evento, cancelarRedirecionamento, { capture: true, once: true });
+  }
+  window.addEventListener('pagehide', cancelarRedirecionamento, { once: true });
+
   if (android) {
     const alternativa = new URL(location.href);
     alternativa.searchParams.set('manual', '1');

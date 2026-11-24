@@ -20,6 +20,8 @@ Página publicada: https://www.oficialtg30.com.br/
 
 A configuração `vercel.json` publica o conteúdo de `dist` na raiz do domínio, sem etapa de build.
 
+Na Netlify, importe este repositório na branch `main`. O arquivo `netlify.toml` define a publicação de `dist`, sem comando de build, e mantém as rotas `/01` e `/02`.
+
 ## Links e contatos
 
 - Os links de compra dos kits de 1, 2, 3 e 6 frascos ficam em `dist/afiliado-config.js`.

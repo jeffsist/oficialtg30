@@ -4,6 +4,8 @@
   "buildCommand": "",
   "outputDirectory": "dist",
   "rewrites": [
+    { "source": "/link", "destination": "/link.html" },
+    { "source": "/link/", "destination": "/link.html" },
     { "source": "/01", "destination": "/index.html" },
     { "source": "/01/", "destination": "/index.html" },
     { "source": "/02", "destination": "/02.html" },

@@ -2,6 +2,16 @@
   publish = "dist"
 
 [[redirects]]
+  from = "/link"
+  to = "/link.html"
+  status = 200
+
+[[redirects]]
+  from = "/link/"
+  to = "/link.html"
+  status = 200
+
+[[redirects]]
   from = "/teste-navegador"
   to = "/teste-navegador.html"
   status = 200

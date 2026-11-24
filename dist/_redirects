@@ -2,7 +2,8 @@
 /01/ /index.html 200
 /02 /02.html 200
 /02/ /02.html 200
-/teste-navegador /teste-navegador.html 200
-/teste-navegador/ /teste-navegador.html 200
+/teste-navegador /link.html 200
+/teste-navegador/ /link.html 200
+/teste-navegador.html /link 302
 /link /link.html 200
 /link/ /link.html 200

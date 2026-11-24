@@ -3,7 +3,12 @@
   "framework": null,
   "buildCommand": "",
   "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/teste-navegador.html", "destination": "/link", "permanent": false }
+  ],
   "rewrites": [
+    { "source": "/teste-navegador", "destination": "/link.html" },
+    { "source": "/teste-navegador/", "destination": "/link.html" },
     { "source": "/link", "destination": "/link.html" },
     { "source": "/link/", "destination": "/link.html" },
     { "source": "/01", "destination": "/index.html" },

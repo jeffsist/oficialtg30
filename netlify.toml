@@ -13,13 +13,18 @@
 
 [[redirects]]
   from = "/teste-navegador"
-  to = "/teste-navegador.html"
+  to = "/link.html"
   status = 200
 
 [[redirects]]
   from = "/teste-navegador/"
-  to = "/teste-navegador.html"
+  to = "/link.html"
   status = 200
+
+[[redirects]]
+  from = "/teste-navegador.html"
+  to = "/link"
+  status = 302
 
 [[redirects]]
   from = "/01"

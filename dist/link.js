@@ -2,6 +2,7 @@
   'use strict';
   const destino = 'https://oficialtg30.com.br/';
   const abrir = document.getElementById('abrir');
+  const continuar = document.getElementById('continuar');
   const texto = document.getElementById('abrir-texto');
   const estado = document.getElementById('estado');
   const ajuda = document.getElementById('ajuda');
@@ -9,6 +10,7 @@
   const ios = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   const manual = new URLSearchParams(location.search).has('manual');
   let abertura = null;
+  let linkExterno = abrir;
 
   if (android) {
     const alternativa = new URL(location.href);
@@ -22,20 +24,22 @@
   } else if (ios) {
     // Esquema experimental do Safari: não representa o navegador padrão do iOS.
     abertura = 'x-safari-https://oficialtg30.com.br/';
-    texto.textContent = 'ABRIR NO SAFARI';
+    texto.textContent = continuar.textContent;
+    continuar.textContent = 'Abrir no Safari';
+    linkExterno = continuar;
     ajuda.textContent = 'Se aparecer “Abrir no Safari”, confirme. Se o aplicativo impedir, use o menu dele e procure “Abrir no navegador”, ou copie o link.';
-    estado.textContent = manual ? 'Toque abaixo para tentar abrir o site no Safari.' : 'Tentando abrir o site no Safari…';
+    estado.textContent = manual ? 'Use “Abrir no Safari” no fim da página ou toque em “Clique para continuar”.' : 'Tentando abrir o site no Safari…';
   }
 
   if (abertura) {
-    abrir.href = abertura;
-    abrir.addEventListener('click', () => {
+    linkExterno.href = abertura;
+    linkExterno.addEventListener('click', () => {
       estado.textContent = 'Se aparecer uma solicitação para abrir o navegador, confirme para continuar.';
     });
     if (!manual) {
       // Uma única tentativa automática. A ação do botão permanece disponível se o aplicativo bloquear.
       try { window.location.assign(abertura); }
-      catch { estado.textContent = 'Toque no botão abaixo para tentar abrir o navegador.'; }
+      catch { estado.textContent = ios ? 'Use “Abrir no Safari” no fim da página para tentar novamente.' : 'Toque no botão abaixo para tentar abrir o navegador.'; }
     }
   }
 
